@@ -5,11 +5,11 @@ from search import *
 
 #Select algorithm to test by changinge False to True
 test_BFS = False
-test_DFS = True
+test_DFS = False
 test_manhattan = False
 test_anytime_gbfs = False
 test_anytime_weighted_astar = False
-test_alternate = False
+test_non_trivial = True
 test_fval_function = False
 
 if test_BFS:
@@ -20,10 +20,10 @@ if test_BFS:
     solved = 0;
     unsolved = [];
     benchmark = 0;
-    timebound = 4  # 4 second time limit
+    timebound = 10  # 4 second time limit
     for i in range(0, len(PROBLEMS)):
         print("*************************************")
-        print("PROBLEM {}".format(i+1))
+        print("GAME {}".format(i+1))
 
         s0 = PROBLEMS[i]  # Problems get harder as i gets bigger
         se = SearchEngine('breadth_first', 'full')
@@ -38,8 +38,8 @@ if test_BFS:
             unsolved.append(i)
 
     print("\n*************************************")
-    print("Of 10 initial problems, {} were solved in less than {} seconds by this solver.".format(solved, timebound))
-    print("Problems that remain unsolved in the set are Problems: {}".format(unsolved))
+    print("Of 10 initial games, {} were solved in less than {} seconds by this solver.".format(solved, timebound))
+    print("Problems that remain unsolved in the set are games: { }".format(unsolved))
     print("The benchmark implementation solved 14 out of the 40 practice problems given 4 seconds.")
     print("*************************************\n")
     ##############################################################
@@ -56,7 +56,7 @@ if test_DFS:
     timebound = 4  # 4 second time limit
     for i in range(0, len(PROBLEMS)):
         print("*************************************")
-        print("PROBLEM {}".format(i+1))
+        print("GAME {}".format(i+1))
 
         s0 = PROBLEMS[i]  # Problems get harder as i gets bigger
         se = SearchEngine('depth_first', 'full')
@@ -71,8 +71,8 @@ if test_DFS:
             unsolved.append(i)
 
     print("\n*************************************")
-    print("Of 10 initial problems, {} were solved in less than {} seconds by this solver.".format(solved, timebound))
-    print("Problems that remain unsolved in the set are Problems: {}".format(unsolved))
+    print("Of 10 initial games, {} were solved in less than {} seconds by this solver.".format(solved, timebound))
+    print("Games that remain unsolved in the set are Games: {}".format(unsolved))
     print("The benchmark implementation solved 14 out of the 40 practice problems given 4 seconds.")
     print("*************************************\n")
     ##############################################################
@@ -88,8 +88,8 @@ if test_manhattan:
 
     solved = 0; unsolved = []
 
-    for i in range(0, 10):
-        print("PROBLEM {}".format(i+1))
+    for i in range(0, 5):
+        print("GAME {}".format(i+1))
 
         s0 = PROBLEMS[i]
 
@@ -119,9 +119,9 @@ if test_anytime_gbfs:
   print('Testing Anytime GBFS')
 
   solved = 0; unsolved = []; benchmark = 0; timebound = 8 #8 second time limit 
-  for i in range(0, 10):
+  for i in range(0, 6):
     print("*************************************")  
-    print("PROBLEM {}".format(i+1))
+    print("GAME {}".format(i+1))
 
     s0 = PROBLEMS[i] #Problems get harder as i gets bigger
     weight = 10
@@ -152,9 +152,9 @@ if test_anytime_weighted_astar:
   print('Testing Anytime Weighted A Star')
 
   solved = 0; unsolved = []; benchmark = 0; timebound = 8 #8 second time limit 
-  for i in range(0, 10):
+  for i in range(0, 6):
     print("*************************************")  
-    print("PROBLEM {}".format(i+1))
+    print("GAME {}".format(i+1))
 
     s0 = PROBLEMS[i] #Problems get harder as i gets bigger
     weight = 10
@@ -171,24 +171,24 @@ if test_anytime_weighted_astar:
   print("\n*************************************")  
   print("Of 10 initial problems, {} were solved in less than {} seconds by this solver.".format(solved, timebound))  
   print("Of the {} problems that were solved, the cost of {} matched or outperformed the benchmark.".format(solved, benchmark))  
-  print("Problems that remain unsolved in the set are Problems: {}".format(unsolved))  
-  print("The benchmark implementation solved 6 out of the 10 practice problems given 8 seconds.")  
+  print("Games that remain unsolved in the set are Problems: {}".format(unsolved))
+  print("The benchmark implementation solved 6 out of the 10 practice games given 8 seconds.")
   print("*************************************\n") 
   ##############################################################
 
-if test_alternate:
+if test_non_trivial:
 
   ##############################################################
   # TEST ALTERNATE HEURISTIC
-  print('Testing alternate heuristic with greedy best-first search')
+  print('Testing alternate heuristic with uniform-cost search')
 
-  solved = 0; unsolved = []; benchmark = 0; timebound = 4 #4 second time limit
+  solved = 0; unsolved = []; benchmark = 0; timebound = 8 #8 second time limit
   for i in range(0, len(PROBLEMS)):
     print("*************************************")
-    print("PROBLEM {}".format(i+1))
+    print("GAME {}".format(i+1))
 
     s0 = PROBLEMS[i] #Problems get harder as i gets bigger
-    se = SearchEngine('best_first', 'full')
+    se = SearchEngine('ucs', 'full')
     se.init_search(s0, goal_fn=sokoban_goal_state, heur_fn=heur_alternate)
     #se.init_search(s0, goal_fn=sokoban_goal_state, heur_fn=heur_euclidean_distance)
     final = se.search(timebound)
