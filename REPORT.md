@@ -275,7 +275,4 @@ The benchmark implementation solved 14 out of the 40 practice games given 4 seco
 Improvements will need to be made to the conditional statements for all search when the number of boxes, 'B' are greater than the number of storage locations, 'S'. This causes the compiler to run in an infinite loop if the time constraint were absent.
 ## References
 *************************************
- #### Fung, A (angusfung), sokoban-AI, Github, accessed September 27, 2022, https://github.com/angusfung/sokoban-AIPROBLEM 6
-TRACE: Search has exceeeded the time bound provided.
-Search Failed! No solution found.
-Nodes expanded = 197842, states generated = 429868, states cycle check pruned = 232026, states cost bound pruned = 0
+ #### Fung, A (angusfung), sokoban-AI, Github, accessed September 27, 2022, https://github.com/angusfung/sokoban-AI
