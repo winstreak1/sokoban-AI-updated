@@ -20,14 +20,15 @@ def absolute(num):
     return num * -1
   else:
     return num
-
+#Manhattan
 def heur_manhattan_distance(state):
 #IMPLEMENT
     '''admissible sokoban heuristic: manhattan distance'''
     '''INPUT: a sokoban state'''
     '''OUTPUT: a numeric value that serves as an estimate of the distance of the state to the goal.'''      
-
+#declarations and initialization
     h=0 #heuristic cost.
+#for loop with the state of boxes as parameters
     for box in state.boxes:
       box_num=state.boxes[box] #returns the value associated with the key
       if state.restrictions == None:
@@ -95,7 +96,7 @@ def heur_euclidean_distance(state): #euclidean distance from each box to each st
       h+=min_distance  #total heuristic.
       min_distance = float("inf") #reintialize for next iteration
     return h
-
+#not used
 def heur_robot_to_goal(state):
     '''provides an (admissible) estimate of the distance between the robot to the goal
        this goal is the closest storage.
@@ -113,7 +114,7 @@ def heur_robot_to_goal(state):
         if distance < min_distance:
           min_distance = distance
     return min_distance
-
+#not used
 def L2Norm(state): #sums the distances from any box to any storage
     min_distance = float('inf')
     distance = 0
@@ -123,7 +124,7 @@ def L2Norm(state): #sums the distances from any box to any storage
         #if distance < min_distance:
           #min_distance = distance
     return distance
-
+#not used
 def L2Norm1(state): #min distance
     min_distance = float('inf')
     for box in state.boxes:
@@ -133,15 +134,15 @@ def L2Norm1(state): #min distance
           min_distance = distance
     return min_distance
     
-
+#initialize and declare
 problem_number = 0 
-
+#Alternated function used to implement BFS and DFS
 def heur_alternate(state):
 #IMPLEMENT
     '''a better sokoban heuristic'''
     '''INPUT: a sokoban state'''
     '''OUTPUT: a numeric value that serves as an estimate of the distance of the state to the goal.'''
-    
+    #declare global variables
     global problem_number
     global last_heuristic
     global prev_state
@@ -149,7 +150,7 @@ def heur_alternate(state):
     key = ''
     
 
-    
+    #conditional statement that returns previous state if current and previous states are equal
     if state.parent == None:
       look_up = {}
       problem_number += 1
@@ -210,7 +211,7 @@ def deadblock_check(box,state,height,width,goal_restriction,key):
     right = (x+1,y)
     top = (x,y-1)
     bottom = (x,y+1)
-    
+    #conditions for movement of boxes
     if top in state.obstacles or top[1] < 0 or top in state.boxes:
       top_obs = True
     if bottom in state.obstacles or bottom[1] > (height - 1) or bottom in state.boxes:
@@ -297,7 +298,7 @@ def deadblock_check(box,state,height,width,goal_restriction,key):
     right_obs = False
     top_obs = False
     bottom_obs = False
-    
+    #conditional statements for obstacles
     if top in state.obstacles or top[1] < 0:
       top_obs = True
     if bottom in state.obstacles or bottom[1] > (height - 1):
@@ -334,7 +335,7 @@ def deadblock_check(box,state,height,width,goal_restriction,key):
     right_obs = False
     top_obs = False
     bottom_obs = False
-    
+    #conditional statements when obstacles are present
     if top in state.obstacles or top[1] < 0 or top in state.boxes:
       top_obs = True
     if bottom in state.obstacles or bottom[1] > (height - 1) or bottom in state.boxes:
@@ -400,7 +401,7 @@ def fval_function(sN, weight):
     return sN.gval + weight * sN.hval
 
 def anytime_gbfs(initial_state, heur_fn, timebound = 10):
-#IMPLEMENT
+# declarations
     '''Provides an implementation of anytime greedy best-first search, as described in the HW1 handout'''
     '''INPUT: a sokoban state that represents the start state and a timebound (number of seconds)'''
     '''OUTPUT: A goal state (if a goal is found), else False'''
@@ -410,12 +411,12 @@ def anytime_gbfs(initial_state, heur_fn, timebound = 10):
     
     se = SearchEngine('best_first', 'full')
     se.init_search(initial_state, goal_fn =sokoban_goal_state, heur_fn=heur_fn)
-    
+    #while loop with time after start and excluding search engine.open.empty
     while (time_remain > 0) and not se.open.empty():
       iter += 1
       t_start = os.times()[0]
       print(t_start)
-        
+        #conditional statement of first iteration
       if iter == 1:
         final = se.search(timebound)
         
@@ -448,14 +449,14 @@ def anytime_gbfs(initial_state, heur_fn, timebound = 10):
     except:
       return final
     
-    
+# A *
 def anytime_weighted_astar(initial_state, heur_fn, weight=1., timebound = 10):
 #IMPLEMENT
     '''Provides an implementation of anytime weighted a-star, as described in the HW1 handout'''
     '''INPUT: a sokoban state that represents the start state and a timebound (number of seconds)'''
     '''OUTPUT: A goal state (if a goal is found), else False''' 
     
-    #initialization
+    #initialization and declaration
     best_path_cost = float("inf")
     time_remain = 8
     iter = 0 
@@ -463,11 +464,11 @@ def anytime_weighted_astar(initial_state, heur_fn, weight=1., timebound = 10):
     wrapped_fval_function = (lambda sN: fval_function(sN, weight))
     se = SearchEngine('custom', 'full')
     se.init_search(initial_state, sokoban_goal_state, heur_fn, wrapped_fval_function)
-    
+    #while loop aafter time begins excluding search engine being empty
     while (time_remain > 0) and not se.open.empty():
       iter += 1
       t_start = os.times()[0]
-      
+      #conditinal statement when iteration is 1
       if iter == 1:
         final = se.search(timebound)
         try:

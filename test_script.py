@@ -87,17 +87,17 @@ if test_manhattan:
     correct_man_dist = [4, 4, 2, 8, 11, 11, 14, 14, 27, 9, ]
 
     solved = 0; unsolved = []
-
+#iteration through Games 1-6
     for i in range(0, 5):
         print("GAME {}".format(i+1))
-
+#save problem(games) set to s0.
         s0 = PROBLEMS[i]
 
         man_dist = heur_manhattan_distance(s0)
         print('calculated man_dist:', str(man_dist))
         #To see state
         print(s0.state_string())
-
+#conditinoal statement to increase 'solved' by 1
         if man_dist == correct_man_dist[i]:
             solved += 1
         else:
@@ -122,11 +122,11 @@ if test_anytime_gbfs:
   for i in range(0, 6):
     print("*************************************")  
     print("GAME {}".format(i+1))
-
+#save PROBLEMS[i] to s0
     s0 = PROBLEMS[i] #Problems get harder as i gets bigger
     weight = 10
     final = anytime_gbfs(s0, heur_fn=heur_displaced, timebound=timebound)
-
+#conditional statemenet comparing benchmark to final.gval
     if final:
       final.print_path()   
       if final.gval <= len_benchmark[i] or len_benchmark[i] == -99:
@@ -151,15 +151,16 @@ if test_anytime_weighted_astar:
   # TEST ANYTIME WEIGHTED A STAR
   print('Testing Anytime Weighted A Star')
 
-  solved = 0; unsolved = []; benchmark = 0; timebound = 8 #8 second time limit 
+  solved = 0; unsolved = []; benchmark = 0; timebound = 8 #8 second time limit
+  #iteration through problem(game) set 1-6
   for i in range(0, 6):
     print("*************************************")  
     print("GAME {}".format(i+1))
-
-    s0 = PROBLEMS[i] #Problems get harder as i gets bigger
+#save PROBLEMS[i] to s0 memory and other declarations
+    s0 = PROBLEMS[i]
     weight = 10
     final = anytime_weighted_astar(s0, heur_fn=heur_displaced, weight=weight, timebound=timebound)
-
+#conditional statement comparing final.gval to len_benchmark[i]
     if final:
       final.print_path()   
       if final.gval <= len_benchmark[i] or len_benchmark[i] == -99:
@@ -187,6 +188,7 @@ if test_non_trivial:
     print("*************************************")
     print("GAME {}".format(i+1))
 
+#declarations referencing functions from search.py
     s0 = PROBLEMS[i] #Problems get harder as i gets bigger
     se = SearchEngine('ucs', 'full')
     se.init_search(s0, goal_fn=sokoban_goal_state, heur_fn=heur_alternate)
