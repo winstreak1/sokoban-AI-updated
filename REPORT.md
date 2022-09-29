@@ -244,7 +244,7 @@ Nodes expanded = 210849, states generated = 522941, states cycle check pruned = 
 
 ## Comparison
 *************************************
-Out of all the algorithms implemented, the Greedy-Best algorithm showed the greatest success rate by solving 3/6 games. Among all the remaining algorithms, 2/6 games were solved. By increasing the time interval for all algorithms, results improved based on the additional attempts at searching the tree. 
+Out of all the algorithms implemented, the Greedy-Best and Breadth-First search algorithms showed the greatest success rate by solving 4/6 games. Among all the remaining algorithms excpet for Manhattan Heuristic, 3/6 games were solved. By increasing the time interval for all algorithms, results improved based on the additional attempts at searching the tree. 
 
 
 ## Analysis
