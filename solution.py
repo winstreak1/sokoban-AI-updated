@@ -62,8 +62,6 @@ def heur_manhattan_distance(state):
     return h
 
 def heur_euclidean_distance(state): #euclidean distance from each box to each storage.
-
-
     h=0 #heuristic cost.
     for box in state.boxes:
       box_num=state.boxes[box] #returns the value associated with the key
@@ -96,6 +94,7 @@ def heur_euclidean_distance(state): #euclidean distance from each box to each st
       h+=min_distance  #total heuristic.
       min_distance = float("inf") #reintialize for next iteration
     return h
+
 #not used
 def heur_robot_to_goal(state):
     '''provides an (admissible) estimate of the distance between the robot to the goal
@@ -136,7 +135,7 @@ def L2Norm1(state): #min distance
     
 #initialize and declare
 problem_number = 0 
-#Alternated function used to implement BFS and DFS
+#Alternate function used to implement BFS and DFS
 def heur_alternate(state):
 #IMPLEMENT
     '''a better sokoban heuristic'''

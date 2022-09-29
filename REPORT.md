@@ -8,64 +8,60 @@
 ## Solutions
 ### Breadth-First Search
 *************************************
-### GAME 1
-Solution Found with cost of 45 in search time of 0.453125 sec
+GAME 1
+Solution Found with cost of 45 in search time of 0.421875 sec
 Nodes expanded = 16426, states generated = 40639, states cycle check pruned = 24213, states cost bound pruned = 0
-### GAME 2
+*************************************
+GAME 2
+Solution Found with cost of 22 in search time of 3.65625 sec
+Nodes expanded = 131358, states generated = 288550, states cycle check pruned = 157192, states cost bound pruned = 0
+*************************************
+GAME 3
 TRACE: Search has exceeded the time bound provided.
 Search Failed! No solution found.
-Nodes expanded = 295580, states generated = 739841, states cycle check pruned = 444261, states cost bound pruned = 0
+Nodes expanded = 448981, states generated = 953991, states cycle check pruned = 505010, states cost bound pruned = 0
 *************************************
-### GAME 3
-TRACE: Search has exceeded the time bound provided.
-Search Failed! No solution found.
-Nodes expanded = 282637, states generated = 587762, states cycle check pruned = 305125, states cost bound pruned = 0
+GAME 4
+Solution Found with cost of 126 in search time of 14.5 sec
+Nodes expanded = 467618, states generated = 1116646, states cycle check pruned = 649028, states cost bound pruned = 0
 *************************************
-### GAME 4
-TRACE: Search has exceeded the time bound provided.
-Search Failed! No solution found.
-Nodes expanded = 282883, states generated = 670757, states cycle check pruned = 387874, states cost bound pruned = 0
-*************************************
-### GAME 5
-Solution Found with cost of 34 in search time of 4.125 sec
+GAME 5
+Solution Found with cost of 34 in search time of 4.015625 sec
 Nodes expanded = 129208, states generated = 310746, states cycle check pruned = 181538, states cost bound pruned = 0
-ACTION was START
-
 *************************************
-### GAME 6
+GAME 6
 TRACE: Search has exceeded the time bound provided.
 Search Failed! No solution found.
-Nodes expanded = 282540, states generated = 620243, states cycle check pruned = 337703, states cost bound pruned = 0
+Nodes expanded = 469814, states generated = 1048462, states cycle check pruned = 578648, states cost bound pruned = 0
 
 ### Depth-First Search
 *************************************
-### GAME 1
-Solution Found with cost of 51 in search time of 0.484375 sec
+GAME 1
+Solution Found with cost of 51 in search time of 0.546875 sec
 Nodes expanded = 16660, states generated = 41707, states cycle check pruned = 25047, states cost bound pruned = 0
 *************************************
-### GAME 2
+GAME 2
+Solution Found with cost of 81 in search time of 0.078125 sec
+Nodes expanded = 3039, states generated = 7911, states cycle check pruned = 4872, states cost bound pruned = 0
+*************************************
+GAME 3
 TRACE: Search has exceeded the time bound provided.
 Search Failed! No solution found.
-Nodes expanded = 139536, states generated = 379659, states cycle check pruned = 240123, states cost bound pruned = 0
+Nodes expanded = 1915632, states generated = 4763797, states cycle check pruned = 2848165, states cost bound pruned = 0
 *************************************
-### GAME 3
+GAME 4
 TRACE: Search has exceeded the time bound provided.
 Search Failed! No solution found.
-Nodes expanded = 147599, states generated = 368868, states cycle check pruned = 221269, states cost bound pruned = 0
+Nodes expanded = 1969160, states generated = 4763646, states cycle check pruned = 2794486, states cost bound pruned = 0
 *************************************
-### GAME 4
-TRACE: Search has exceeded the time bound provided.
-Search Failed! No solution found.
-Nodes expanded = 157408, states generated = 384336, states cycle check pruned = 226928, states cost bound pruned = 0
-*************************************
-### GAME 5
-Solution Found with cost of 49 in search time of 1.421875 sec
+GAME 5
+Solution Found with cost of 49 in search time of 1.546875 sec
 Nodes expanded = 48684, states generated = 129806, states cycle check pruned = 81122, states cost bound pruned = 0
 *************************************
-### GAME 6
+GAME 6
 TRACE: Search has exceeded the time bound provided.
 Search Failed! No solution found.
-Nodes expanded = 141108, states generated = 375625, states cycle check pruned = 234517, states cost bound pruned = 0
+Nodes expanded = 1841171, states generated = 4913299, states cycle check pruned = 3072128, states cost bound pruned = 0
 
 ### Manhattan Heuristic
 Testing Manhattan Distance
@@ -77,16 +73,16 @@ calculated man_dist: 4
 calculated man_dist: 9
 *************************************
 ### GAME 3
-calculated man_dist: no results
+calculated man_dist: 9
 *************************************
 ### GAME 4
-calculated man_dist: no results
+calculated man_dist: 8
 *************************************
 ### GAME 5
-calculated man_dist: no results
+calculated man_dist: 7
 *************************************
 ### GAME 6
-calculated man_dist: no results
+calculated man_dist: 7
 
 ### Greedy Best
 *************************************
@@ -160,44 +156,63 @@ Nodes expanded = 236020, states generated = 607969, states cycle check pruned = 
 
 ### A Star
 *************************************
-### GAME 1
-#### Solution Found with cost of 45 in search time of 0.46875 sec
+GAME 1
+Solution Found with cost of 45 in search time of 0.421875 sec
 Nodes expanded = 11856, states generated = 27992, states cycle check pruned = 16136, states cost bound pruned = 0
-#### Solution Found with cost of 45 in search time of 0.015625 sec
+Solution Found with cost of 45 in search time of 0.0 sec
 Nodes expanded = 11977, states generated = 28305, states cycle check pruned = 16312, states cost bound pruned = 16
-#### Solution Found with cost of 45 in search time of 0.0 sec
+Solution Found with cost of 45 in search time of 0.0 sec
 Nodes expanded = 12013, states generated = 28440, states cycle check pruned = 16395, states cost bound pruned = 32
-#### Solution Found with cost of 45 in search time of 0.015625 sec
+Solution Found with cost of 45 in search time of 0.015625 sec
 Nodes expanded = 12382, states generated = 29487, states cycle check pruned = 17030, states cost bound pruned = 75
-#### Search Failed! No solution found.
+Search Failed! No solution found.
 Nodes expanded = 16027, states generated = 40482, states cycle check pruned = 23962, states cost bound pruned = 493
 *************************************
-### GAME 2
-TRACE: Search has exceeded the time bound provided.
+GAME 2
+Solution Found with cost of 26 in search time of 0.40625 sec
+Nodes expanded = 11881, states generated = 25178, states cycle check pruned = 13297, states cost bound pruned = 0
+Solution Found with cost of 26 in search time of 0.0 sec
+Nodes expanded = 11882, states generated = 25181, states cycle check pruned = 13297, states cost bound pruned = 2
+Solution Found with cost of 26 in search time of 0.0 sec
+Nodes expanded = 11883, states generated = 25201, states cycle check pruned = 13309, states cost bound pruned = 9
+Solution Found with cost of 26 in search time of 0.0 sec
+Nodes expanded = 11884, states generated = 25236, states cycle check pruned = 13329, states cost bound pruned = 23
+Solution Found with cost of 26 in search time of 0.0 sec
+Nodes expanded = 11885, states generated = 25319, states cycle check pruned = 13384, states cost bound pruned = 50
+Solution Found with cost of 26 in search time of 0.109375 sec
+Nodes expanded = 14333, states generated = 31761, states cycle check pruned = 16743, states cost bound pruned = 685
+Solution Found with cost of 25 in search time of 0.03125 sec
+Nodes expanded = 14981, states generated = 33426, states cycle check pruned = 17594, states cost bound pruned = 851
+Solution Found with cost of 25 in search time of 0.0 sec
+Nodes expanded = 15139, states generated = 33939, states cycle check pruned = 17849, states cost bound pruned = 951
+Solution Found with cost of 24 in search time of 0.03125 sec
+Nodes expanded = 16122, states generated = 36015, states cycle check pruned = 18798, states cost bound pruned = 1095
+Solution Found with cost of 22 in search time of 0.375 sec
+Nodes expanded = 25626, states generated = 57652, states cycle check pruned = 29935, states cost bound pruned = 2091
 Search Failed! No solution found.
-Nodes expanded = 170548, states generated = 409513, states cycle check pruned = 238965, states cost bound pruned = 0
-TRACE: Search has exceeded the time bound provided.
-Search Failed! No solution found.
-Nodes expanded = 313622, states generated = 785362, states cycle check pruned = 471740, states cost bound pruned = 0
+Nodes expanded = 83769, states generated = 236566, states cycle check pruned = 122252, states cost bound pruned = 30545
 *************************************
-### GAME 3
+GAME 3
 TRACE: Search has exceeded the time bound provided.
 Search Failed! No solution found.
-Nodes expanded = 172540, states generated = 346727, states cycle check pruned = 174187, states cost bound pruned = 0
-*************************************
-### GAME 4
+Nodes expanded = 337898, states generated = 693902, states cycle check pruned = 356004, states cost bound pruned = 0
 TRACE: Search has exceeded the time bound provided.
 Search Failed! No solution found.
-Nodes expanded = 157910, states generated = 372561, states cycle check pruned = 214651, states cost bound pruned = 0
+Nodes expanded = 612260, states generated = 1292582, states cycle check pruned = 680322, states cost bound pruned = 0
 *************************************
-### GAME 5
-Solution Found with cost of 34 in search time of 0.671875 sec
+GAME 4
+TRACE: Search has exceeded the time bound provided.
+Search Failed! No solution found.
+Nodes expanded = 315090, states generated = 733931, states cycle check pruned = 418841, states cost bound pruned = 0
+*************************************
+GAME 5
+Solution Found with cost of 34 in search time of 0.765625 sec
 Nodes expanded = 15784, states generated = 35863, states cycle check pruned = 20079, states cost bound pruned = 0
 *************************************
-### GAME 6
+GAME 6
 TRACE: Search has exceeded the time bound provided.
 Search Failed! No solution found.
-Nodes expanded = 181025, states generated = 400567, states cycle check pruned = 219542, states cost bound pruned = 0
+Nodes expanded = 343306, states generated = 790567, states cycle check pruned = 447261, states cost bound pruned = 0
 
 ### Non-Trivial Heuristic
 *************************************
@@ -236,39 +251,43 @@ Out of all the algorithms implemented, the Greedy-Best algorithm showed the grea
 
 ## Analysis
 *************************************
+
 ### Breadth-First Search
 *************************************
-1 of 6 test cases passed on a 4 second time limit. An increase to 10 seconds had a result of 2/6 test cases passing. The passing test cases are Game 1 and Game 5. Of 10 initial games, 2 were solved in less than 10 seconds by this solver. Problems that remain unsolved in the set are games 2, 3, 4, and 6.
+Of 6 initial games, 4 were solved in less than 15 seconds by this solver.
+Games that remain unsolved in the set are Games: [3, 6]
+The benchmark implementation solved 14 out of the 40 practice problems given 4 seconds.
 
 ### Depth-First Search
 *************************************
-Of 10 initial games, 2 were solved in less than 4 seconds by this solver.
-Games that remain unsolved in the set are Games: [2, 3, 4, 6].
+Of 6 initial games, 3 were solved in less than 15 seconds by this solver.
+Games that remain unsolved in the set are Games: [3, 4, 6]
 The benchmark implementation solved 14 out of the 40 practice problems given 4 seconds.
 
 ### Manhattan Heuristic
 *************************************
-After the initial run, only the first two games[1,2], produced a manhattan heuristic result. Games [3,4,5,6] remained unsolved without any relevant data.
+In the problem set provided, you calculated the correct Manhattan distance for 2 states out of 6.
+States that were incorrect: [2, 3, 5, 6]
 
 ### Greedy Best
 *************************************
-Of 10 initial problems, 2 were solved in less than 8 seconds by this solver.
-Of the 2 problems that were solved, the cost of 0 matched or outperformed the benchmark.
-Problems that remain unsolved in the set are Problems: [2, 3, 4]
+Of 6 initial problems, 4 were solved in less than 60 seconds by this solver.
+Of the 4 problems that were solved, the cost of 1 matched or outperformed the benchmark.
+Problems that remain unsolved in the set are Problems: [3, 6]
 The benchmark implementation solved 6 out of the 10 practice problems given 8 seconds.
 
 ### A Star
 *************************************
-Of 10 initial problems, 2 were solved in less than 8 seconds by this solver.
-Of the 2 problems that were solved, the cost of 1 matched or outperformed the benchmark.
-Problems that remain unsolved in the set are Problems: [2, 3, 4]
-The benchmark implementation solved 6 out of the 10 practice problems given 8 seconds.
+Of 6 initial problems, 3 were solved in less than 15 seconds by this solver.
+Of the 3 problems that were solved, the cost of 2 matched or outperformed the benchmark.
+Games that remain unsolved in the set are Problems: [3, 4, 6]
+The benchmark implementation solved 6 out of the 10 practice games given 8 seconds.
 
 ### Non-Trivial Heuristic
 *************************************
-Of 6 initial games, 2 were solved in less than 8 seconds by this solver.
-Games that remain unsolved in the set are Games: [2, 3, 4, 6]
-The benchmark implementation solved 14 out of the 40 practice games given 4 seconds.
+Of 6 initial problems, 4 were solved in less than 8 seconds by this solver.
+Problems that remain unsolved in the set are Problems: [3, 6]
+The benchmark implementation solved 14 out of the 40 practice problems given 4 seconds.
 
 ## Conclusion
 *************************************
