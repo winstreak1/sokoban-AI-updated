@@ -156,7 +156,7 @@ Nodes expanded = 236020, states generated = 607969, states cycle check pruned = 
 
 ### A Star
 *************************************
-GAME 1
+### GAME 1
 Solution Found with cost of 45 in search time of 0.421875 sec
 Nodes expanded = 11856, states generated = 27992, states cycle check pruned = 16136, states cost bound pruned = 0
 Solution Found with cost of 45 in search time of 0.0 sec
@@ -168,7 +168,7 @@ Nodes expanded = 12382, states generated = 29487, states cycle check pruned = 17
 Search Failed! No solution found.
 Nodes expanded = 16027, states generated = 40482, states cycle check pruned = 23962, states cost bound pruned = 493
 *************************************
-GAME 2
+### GAME 2
 Solution Found with cost of 26 in search time of 0.40625 sec
 Nodes expanded = 11881, states generated = 25178, states cycle check pruned = 13297, states cost bound pruned = 0
 Solution Found with cost of 26 in search time of 0.0 sec
@@ -192,7 +192,7 @@ Nodes expanded = 25626, states generated = 57652, states cycle check pruned = 29
 Search Failed! No solution found.
 Nodes expanded = 83769, states generated = 236566, states cycle check pruned = 122252, states cost bound pruned = 30545
 *************************************
-GAME 3
+### GAME 3
 TRACE: Search has exceeded the time bound provided.
 Search Failed! No solution found.
 Nodes expanded = 337898, states generated = 693902, states cycle check pruned = 356004, states cost bound pruned = 0
@@ -200,16 +200,16 @@ TRACE: Search has exceeded the time bound provided.
 Search Failed! No solution found.
 Nodes expanded = 612260, states generated = 1292582, states cycle check pruned = 680322, states cost bound pruned = 0
 *************************************
-GAME 4
+### GAME 4
 TRACE: Search has exceeded the time bound provided.
 Search Failed! No solution found.
 Nodes expanded = 315090, states generated = 733931, states cycle check pruned = 418841, states cost bound pruned = 0
 *************************************
-GAME 5
+### GAME 5
 Solution Found with cost of 34 in search time of 0.765625 sec
 Nodes expanded = 15784, states generated = 35863, states cycle check pruned = 20079, states cost bound pruned = 0
 *************************************
-GAME 6
+### GAME 6
 TRACE: Search has exceeded the time bound provided.
 Search Failed! No solution found.
 Nodes expanded = 343306, states generated = 790567, states cycle check pruned = 447261, states cost bound pruned = 0
@@ -217,32 +217,30 @@ Nodes expanded = 343306, states generated = 790567, states cycle check pruned = 
 ### Non-Trivial Heuristic
 *************************************
 ### GAME 1
-Solution Found with cost of 45 in search time of 0.625 sec
-Nodes expanded = 16504, states generated = 40821, states cycle check pruned = 24317, states cost bound pruned = 0
+Solution Found with cost of 45 in search time of 0.03125 sec
+Nodes expanded = 1140, states generated = 2613, states cycle check pruned = 1473, states cost bound pruned = 0
 *************************************
 ### GAME 2
-TRACE: Search has exceeded the time bound provided.
-Search Failed! No solution found.
-Nodes expanded = 189761, states generated = 438858, states cycle check pruned = 249097, states cost bound pruned = 0
+Solution Found with cost of 32 in search time of 0.015625 sec
+Nodes expanded = 743, states generated = 1257, states cycle check pruned = 514, states cost bound pruned = 0
 *************************************
 ### GAME 3
 TRACE: Search has exceeded the time bound provided.
 Search Failed! No solution found.
-Nodes expanded = 182539, states generated = 371253, states cycle check pruned = 188714, states cost bound pruned = 0
+Nodes expanded = 221985, states generated = 527200, states cycle check pruned = 305215, states cost bound pruned = 0
 *************************************
 ### GAME 4
-TRACE: Search has exceeded the time bound provided.
-Search Failed! No solution found.
-Nodes expanded = 185452, states generated = 441131, states cycle check pruned = 255679, states cost bound pruned = 0
+Solution Found with cost of 164 in search time of 1.484375 sec
+Nodes expanded = 39309, states generated = 86500, states cycle check pruned = 47191, states cost bound pruned = 0
 *************************************
 ### GAME 5
-Solution Found with cost of 34 in search time of 5.390625 sec
-Nodes expanded = 131871, states generated = 317319, states cycle check pruned = 185448, states cost bound pruned = 0
+Solution Found with cost of 34 in search time of 0.03125 sec
+Nodes expanded = 943, states generated = 2057, states cycle check pruned = 1114, states cost bound pruned = 0
 *************************************
 ### GAME 6
 TRACE: Search has exceeded the time bound provided.
 Search Failed! No solution found.
-Nodes expanded = 198218, states generated = 430763, states cycle check pruned = 232545, states cost bound pruned = 0
+Nodes expanded = 210849, states generated = 522941, states cycle check pruned = 312092, states cost bound pruned = 0
 
 ## Comparison
 *************************************
@@ -289,9 +287,6 @@ Of 6 initial problems, 4 were solved in less than 8 seconds by this solver.
 Problems that remain unsolved in the set are Problems: [3, 6]
 The benchmark implementation solved 14 out of the 40 practice problems given 4 seconds.
 
-## Conclusion
-*************************************
-Improvements will need to be made to the conditional statements for all search when the number of boxes, 'B' are greater than the number of storage locations, 'S'. This causes the compiler to run in an infinite loop if the time constraint were absent.
 ## References
 *************************************
  #### Fung, A (angusfung), sokoban-AI, Github, accessed September 27, 2022, https://github.com/angusfung/sokoban-AI
